@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EDEEED;
+}
+.drop {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+                15px 25px 10px rgba(0, 0, 0, 0.1),
+                15px 20px 20px rgba(0, 0, 0, 0.05),
+                inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+}
+.drop::before {
+    content:  "";
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    background: #FFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+}
+.drop::after {
+    content:  "";
+    position: absolute;
+    top: 25px;
+    left: 65px;
+    background: #FFF;
+    width: 10px;
+    height: 10px;
+    border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+}
+.drop:nth-child(2){
+    transform: scale(0.5) translate(-230px,-150px);
+    border-radius: 64% 36% 42% 58% / 42% 37% 63% 58% ;
+}
+.drop:nth-child(3){
+    transform: scale(0.5) translate(280px,-650px);
+    border-radius: 49% 51% 42% 58% / 56% 47% 53% 44% ;
+}
+.drop:nth-child(4){
+    transform: scale(0.35) translate(120px, -1700px);
+    border-radius: 39% 61% 63% 37% / 77% 47% 53% 23% ;
+}
+    </style>
+</head>
+<body>
+    <div class="drops">
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+    </div>
+</body>
+</html>
